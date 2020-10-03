@@ -8,11 +8,17 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@react-native-community/netinfo": "5.9.6",
+    "amazon-cognito-identity-js": "^4.4.0",
+    "aws-amplify": "^3.3.2",
+    "aws-amplify-react": "^4.2.6",
+    "aws-amplify-react-native": "^4.2.7",
     "expo": "~39.0.2",
     "expo-status-bar": "~1.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-39.0.2.tar.gz",
+    "react-native-vector-icons": "^7.1.0",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
