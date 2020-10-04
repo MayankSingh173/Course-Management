@@ -13,7 +13,9 @@
     },
     "categories": {
       "auth": {
-        "rnamplifybf9b8727": {}
+        "rnamplifybf9b8727": {
+          "hostedUIProviderCreds": "[]"
+        }
       }
     }
   }

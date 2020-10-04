@@ -13,9 +13,8 @@ import {styles} from '../styles/FormStyles'
 
 const changePassword = (props) => {
     if(props.authState == "changePassword"){
-        const email = "mayankayush173@gmail.com";
         const [state, setState] = useState({
-            email: {email},
+            email: "mayankayush173@gmail.com",
             code: "",
             password: "",
         });
@@ -25,19 +24,18 @@ const changePassword = (props) => {
         async function onSubmit(){
             const codeError = validateCode(state.code);
             const passwordError = validatePassword(state.password);
-            const { email: username, code, password } = state;
-            console.log('Enter Submit')
+            const username = state.email;
+            const code = state.code;
+            const pass = state.password;
             if( codeError || passwordError){
                 setError({ code: codeError, password: passwordError})
             }else{
                 try{
                     setError({ code: '', password: ''})
-                    const user = await Auth.forgotPasswordSubmit(username, code, password);
+                    const user = await Auth.forgotPasswordSubmit(username, code, pass);
                     props.onStateChange('signIn', user);
-                    console.log(email,code, password,"Without error")
+                    Alert.alert("Your Password has changed");
                 }catch(error){
-                    console.log(email,code, password)
-                    console.log(error);
                     Alert.alert(error.message);
                 }
             }
